@@ -1,2 +1,11 @@
-<p>blog-list works!</p>
-<h1>Placeholder blog-list Works</h1>
+<h2> Blog</h2>
+<ul>
+    @for (post of posts; track post.id ) {
+    <li >
+        <a [routerLink]="['/blog', post.id]">{{ post.title }}</a>
+    </li>
+}
+    @empty {
+        <li>No posts available</li>
+    }
+</ul>

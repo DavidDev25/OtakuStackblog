@@ -1,2 +1,9 @@
-<p>blog-post works!</p>
-<h1>Placeholder blog-post Works</h1>
+@if(post){
+    <h2>{{ post.title }}</h2>
+    <p class="author">Author: {{ post.author }}</p>
+    <article>
+        <div class="content">{{post.content}}</div>
+    </article>
+} @else{
+    <p class="error">Artikel nicht gefunden</p>
+}
